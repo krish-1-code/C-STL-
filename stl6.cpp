@@ -1,26 +1,19 @@
+// Multiset: std::multiset
+
 #include<iostream>
-#include<map>
+#include<set>
 #include<string>
+#include<vector>
 
 int main() {
 
-    std::map<std::string , int> map1;
+    std::vector<int> vect1;
+    vect1= {9,7,7,6,3,1,2,2,4,7};
+    std::multiset<int> set1(vect1.begin(), vect1.end());
 
-    map1 = { {"A" , 21}, {"B" , 24}, {"C" , 30}
+    for(auto num : set1){
 
-    };
-
-    
-
-    map1["D"] = 34;
-
-    map1.insert({"E", 38});
-
-    for (const auto& x : map1) {
-
-        std::cout<< "Key = " << x.first << "   Value = "<< x.second<<'\n';
+        std::cout<<num<<'\t';
     }
-
-
     return 0;
 }
